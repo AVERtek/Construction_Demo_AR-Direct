@@ -246,12 +246,33 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </model-viewer>
      </div>
 
-  <script>
+  <!--<script>
         function openURL() {
             // Replace 'your-url-here' with the actual URL you want to trigger
             window.open('https://avertek.github.io/Construction_Demo_AR-Direct_2/', '_blank');
         }
-    </script>
+    </script> -->
+
+ <script type="module">
+    // Switch model source when carousel buttons are clicked
+    const modelViewer = document.querySelector("model-viewer");
+
+    window.switchSrc = (element, name) => {
+        const base = "https://github.com/AVERtek/Construction_Demo_AR-Direct_2/blob/main/Models/CONSTRUCTION_CENTERED.glb" + name;
+        modelViewer.src = base + ".glb";
+        modelViewer.poster = base + ".webp";
+
+        // Deselect other carousel slides
+        const slides = document.querySelectorAll(".slide");
+        slides.forEach((slide) => {
+            slide.classList.remove("selected");
+        });
+
+        // Select the clicked slide
+        element.classList.add("selected");
+    };
+</script>
+
  
     <section class="attribution">
         <div>
