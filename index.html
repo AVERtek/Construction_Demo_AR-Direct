@@ -249,10 +249,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
      <script type="module">
   const modelViewer = document.querySelector("model-viewer");
 
-  window.switchSrc = (element, name) => {
-    const base = "Models/" + name;
-    modelViewer.src = base + '.glb';
-    modelViewer.poster = base + '.png';
+  window.switchSrc = (element, url) => {
+    modelViewer.setAttribute('ar-modes', 'scene-viewer quick-look');
+    modelViewer.setAttribute('ios-src', url);
+    modelViewer.setAttribute('src', url);
     const slides = document.querySelectorAll(".slide");
     slides.forEach((element) => {element.classList.remove("selected");});
     element.classList.add("selected");
@@ -263,7 +263,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     ev.preventDefault();
   });
 </script>
-
+    
 <style>
   /* This keeps child nodes hidden while the element loads */
   :not(:defined) > * {
@@ -389,7 +389,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   .slide:focus-visible {
     outline: 1px solid #4285f4;
   }
-
 </style>
 </div>
   
