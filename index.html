@@ -224,9 +224,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   
   <!-- JUMP AR VERSION -->   
    <div class="card1">
-    <model-viewer src="Models/CONSTRUCTION_CENTERED.glb?sound=Sound/Hip Hop This 20.mp3" poster="images/under-construction-2891888.jpg" tone-mapping="neutral" shadow-intensity="1" ar 
-     ar-modes="webxr scene-viewer quick-look" ar-scale="auto" camera-controls autoplay camera-orbit="auto auto auto" camera-target="auto auto auto"
-     id="reveal" loading="eager" touch-action="pan-y" alt="Squeeze Page Template" autoplay exposure="1" ios-src="Models/CONSTRUCTION_CENTERED.reality">
+    <model-viewer src="Models/CONSTRUCTION_CENTERED.glb?sound=Sound/Hip Hop This 20.mp3" poster="images/under-construction-2891888.jpg" 
+     tone-mapping="neutral" shadow-intensity="1" ar ar-modes="webxr scene-viewer quick-look" ar-scale="auto" camera-controls autoplay 
+     camera-orbit="auto auto auto" camera-target="auto auto auto" id="reveal" loading="eager" touch-action="pan-y" 
+     alt="Squeeze Page Template" autoplay exposure="1" ios-src="Models/CONSTRUCTION_CENTERED.reality" animation-name="" id="model-viewer"  auto-rotate ar-preferred interaction-prompt="none" 
+     slot= "progress-bar" style="z-index: 1; width: 100%; height: 600px; position: static;">
 
      
      <div id="ar-prompt">
@@ -240,7 +242,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
    <div class="slider">
      <div class="slides">
      <button class="slide selected" onclick="window.location.href = 'https://avertek.github.io/Construction_Demo_AR-Direct_2/'" style="background-image: url('images/Company Here transparent.png');">
-
        </button></div>
        </div>
      </model-viewer>
@@ -250,7 +251,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   window.switchSrc = (element, name) => {
     const base = "Models/" + name;
-    modelViewer.src = base + '.glb';
+    modelViewer.src = base + '';
     modelViewer.poster = base + '.png';
     const slides = document.querySelectorAll(".slide");
     slides.forEach((element) => {element.classList.remove("selected");});
