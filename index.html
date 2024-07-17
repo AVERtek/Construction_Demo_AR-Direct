@@ -250,7 +250,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   const modelViewer = document.querySelector("model-viewer");
 
   window.switchSrc = (element, url) => {
-    modelViewer.setAttribute('ar-modes', 'webxr scene-viewer quick-look');
+    modelViewer.setAttribute('ar-modes', 'scene-viewer quick-look');
     modelViewer.setAttribute('ios-src', url);
     modelViewer.setAttribute('src', url);
     const slides = document.querySelectorAll(".slide");
@@ -262,18 +262,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     // Keep slider interactions from affecting the XR scene.
     ev.preventDefault();
   });
-
-  modelViewer.addEventListener('ar-status', (event) => {
-    if (event.detail.status === 'session-started') {
-      document.getElementById('ar-button').style.display = 'block';
-    } else {
-      document.getElementById('ar-button').style.display = 'none';
-    }
-  });
 </script>
 
-    
-<style>
+ <style>
   /* This keeps child nodes hidden while the element loads */
   :not(:defined) > * {
     display: none;
@@ -398,6 +389,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   .slide:focus-visible {
     outline: 1px solid #4285f4;
+  }
+
+  /* Ensure the AR button is visible in AR mode */
+  model-viewer[ar-status="session-started"] > #ar-button {
+    display: block;
   }
 </style>
 
