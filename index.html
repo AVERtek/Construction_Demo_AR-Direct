@@ -250,7 +250,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   const modelViewer = document.querySelector("model-viewer");
 
   window.switchSrc = (element, url) => {
-    modelViewer.setAttribute('ar-modes', 'scene-viewer quick-look');
+    modelViewer.setAttribute('ar-modes', 'webxr scene-viewer quick-look');
     modelViewer.setAttribute('ios-src', url);
     modelViewer.setAttribute('src', url);
     const slides = document.querySelectorAll(".slide");
