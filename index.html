@@ -262,7 +262,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     // Keep slider interactions from affecting the XR scene.
     ev.preventDefault();
   });
+
+  modelViewer.addEventListener('ar-status', (event) => {
+    if (event.detail.status === 'session-started') {
+      document.getElementById('ar-button').style.display = 'block';
+    } else {
+      document.getElementById('ar-button').style.display = 'none';
+    }
+  });
 </script>
+
     
 <style>
   /* This keeps child nodes hidden while the element loads */
@@ -295,6 +304,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     line-height: 36px;
     border-radius: 18px;
     border: 1px solid #DADCE0;
+    display: block; /* Ensure the button is always displayed */
   }
 
   #ar-button:active {
@@ -390,6 +400,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     outline: 1px solid #4285f4;
   }
 </style>
+
 </div>
   
     <section class="attribution">
