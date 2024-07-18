@@ -91,16 +91,16 @@ footer {
 
 /* Ensure the AR button is visible in AR mode */
 model-viewer[ar-status="session-started"] > #ar-button {
-  display: block !important;
+  visibility: visible !important;
 }
 
 /* Ensure the slider and its buttons are visible in AR mode */ 
 model-viewer[ar-status="session-started"] .slider {
-  display: block !important;
+  visibility: visible !important;
 }
 
 model-viewer[ar-status="session-started"] .slider .slide {
-  display: block !important;
+  visibility: visible !important;
 }
 
 
