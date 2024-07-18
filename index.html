@@ -243,7 +243,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
      
    <div class="slider">
      <div class="slides">
-     <button class="slide selected" onclick="switchSrc(this, 'https://avertek.github.io/Construction_Demo_AR-Direct_2/')" style="background-image: url('images/Company Here transparent.png');">
+     <button class="slide selected" onclick="window.location.href = 'https://avertek.github.io/Construction_Demo_AR-Direct_2/'" style="background-image: url('images/Company Here transparent.png');">
        </button></div>
        </div>
      </model-viewer>
@@ -251,7 +251,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
      <script type="module">
   const modelViewer = document.querySelector("model-viewer");
 
-  window.switchSrc = (element, url) => {
+  window.location.href = (element, url) => {
     modelViewer.setAttribute('ar-modes', 'webxr scene-viewer quick-look');
     modelViewer.setAttribute('ios-src', url);
     modelViewer.setAttribute('src', url);
@@ -264,6 +264,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     // Keep slider interactions from affecting the XR scene.
     ev.preventDefault();
   });
+
+      /* Ensure the AR button is visible in AR mode */
+model-viewer[ar-status="session-started"] > #ar-button {
+  display: block !important;
+  visibility: visible !important;
+}
+
+/* Ensure the slider and its buttons are visible in AR mode */ 
+model-viewer[ar-status="session-started"] .slider {
+  display: block !important;
+  visibility: visible !important;
+}
+
+model-viewer[ar-status="session-started"] .slider .slide {
+  display: block !important;
+  visibility: visible !important;
+}
+
 </script>
 
  <style>
@@ -392,23 +410,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   .slide:focus-visible {
     outline: 1px solid #4285f4;
   }
-
-/* Ensure the AR button is visible in AR mode */
-model-viewer[ar-status="session-started"] > #ar-button {
-  display: block !important;
-  visibility: visible !important;
-}
-
-/* Ensure the slider and its buttons are visible in AR mode */ 
-model-viewer[ar-status="session-started"] .slider {
-  display: block !important;
-  visibility: visible !important;
-}
-
-model-viewer[ar-status="session-started"] .slider .slide {
-  display: block !important;
-  visibility: visible !important;
-}
 
 </style>
 
