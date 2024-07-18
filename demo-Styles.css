@@ -89,6 +89,19 @@ footer {
   background-color:#00000099;
 }
 
+/* Ensure the AR button is visible in AR mode */
+model-viewer[ar-status="session-started"] > #ar-button {
+  display: block !important;
+}
+
+/* Ensure the slider and its buttons are visible in AR mode */ 
+model-viewer[ar-status="session-started"] .slider {
+  display: block !important;
+}
+
+model-viewer[ar-status="session-started"] .slider .slide {
+  display: block !important;
+}
 
 
 
