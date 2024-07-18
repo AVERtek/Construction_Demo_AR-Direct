@@ -395,6 +395,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   model-viewer[ar-status="session-started"] > #ar-button {
     display: block;
   }
+  /* Ensure the slider and its buttons are visible in AR mode */ 
+  model-viewer[ar-status="session-started"] .slider {
+  display: block;
+}
+
+model-viewer[ar-status="session-started"] .slider .slide {
+  display: block;
+}
 </style>
 
 </div>
