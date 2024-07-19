@@ -36,17 +36,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
  <!-- OPTIONAL: include the Model Viewer library from Google, which allows you to display 3D models on a webpage -->  
  <script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@2.5.0/dist/model-viewer.js"></script>
-    <style>
-        model-viewer {
-            /* Your custom styles here */
-        }
-    </style>
- 
+     
  <!-- OPTIONAL: Intersection Observer polyfill for better performance in Safari and IE11 -->
-  <script src="https://unpkg.com/intersection-observer/intersection-observer.js"></script>
+ <script src="https://unpkg.com/intersection-observer/intersection-observer.js"></script>
 
-  <!-- OPTIONAL: Resize Observer polyfill improves resize behavior in non-Chrome browsers -->
-  <script src="https://unpkg.com/resize-observer-polyfill/dist/ResizeObserver.js"></script>
+ <!-- OPTIONAL: Resize Observer polyfill improves resize behavior in non-Chrome browsers -->
+ <script src="https://unpkg.com/resize-observer-polyfill/dist/ResizeObserver.js"></script>
+
+ <!-- OPTIONAL: used directly from various free CDNs such as jsDelivr and Google's own hosted libraries: -->
+ <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
  
  <script>
       function Sync(selector, audioSelector) {
@@ -132,7 +130,6 @@ var getOutboundLink = function(url) {
 </script>
  
 <style> 
- 
 .container {
  column-count: 1;
  column-width: 500px;
@@ -170,6 +167,13 @@ a {
         color: #FFFFFF;
       }
   
+</style>
+
+ <!-- OPTIONAL: adding custom CSS styles to the <model-viewer> element. You can define how the 3D model should be displayed on your webpage. -->
+ <style>
+        model-viewer {
+            /* Your custom styles here */
+        }
 </style>
 
 <body bgcolor= #2E5266>
