@@ -303,6 +303,23 @@ model-viewer[ar-status="session-started"] .slides .slide {
   }
 
   #ar-button {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      display: none;
+    }
+    model-viewer[ar-status="session-started"] #ar-button {
+      display: block;
+    }
+  
+  <!-- #ar-button {
     background-image: url(../../assets/ic_view_in_ar_new_googblue_48dp.png);
     background-repeat: no-repeat;
     background-size: 20px 20px;
@@ -333,7 +350,7 @@ model-viewer[ar-status="session-started"] .slides .slide {
   }
 
   #ar-button:focus-visible {
-    outline: 1px solid #2E5266;
+    outline: 1px solid #2E5266; -->
   }
 
   @keyframes circle {
