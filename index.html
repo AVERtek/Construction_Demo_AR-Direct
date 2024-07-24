@@ -261,6 +261,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       slide.classList.remove("selected");
     });
     element.classList.add("selected");
+
+    // Navigate to the URL
+    window.location.href = url;
   };
 
   document.querySelector(".slider").addEventListener('beforexrselect', (ev) => {
@@ -268,7 +271,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     ev.preventDefault();
   });
 </script>
-
+  
 <script>
       /* Ensure the AR button is visible in AR mode */
 model-viewer[ar-status="session-started"] > #ar-button {
