@@ -294,8 +294,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     });
     element.classList.add("selected");
 
-    // Launch AR experience
-    modelViewer.activateAR();
+    // Navigate to the URL
+    window.location.href = url;
   };
 
   document.querySelector(".slider").addEventListener('beforexrselect', (ev) => {
