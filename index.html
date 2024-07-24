@@ -310,6 +310,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       modelViewer.activateAR();
     }, { once: true });
   });
+
+  // Ensure AR activation on user interaction
+  modelViewer.addEventListener('ar-status', (event) => {
+    if (event.detail.status === 'failed') {
+      alert('AR failed to start. Please try again.');
+    }
+  });
 </script>
 
      
