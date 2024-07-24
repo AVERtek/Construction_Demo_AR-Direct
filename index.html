@@ -294,8 +294,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     });
     element.classList.add("selected");
 
-    // Navigate to the URL
-    window.location.href = url;
+    // Launch AR experience
+    modelViewer.activateAR();
   };
 
   document.querySelector(".slider").addEventListener('beforexrselect', (ev) => {
@@ -303,11 +303,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     ev.preventDefault();
   });
 
-  // Function to launch AR experience
-  modelViewer.addEventListener('click', () => {
+  // Launch AR experience on page load
+  window.addEventListener('load', () => {
     modelViewer.activateAR();
   });
 </script>
+
      
 <script>
       /* Ensure the AR button is visible in AR mode */
