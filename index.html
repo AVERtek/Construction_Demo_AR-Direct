@@ -303,12 +303,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     ev.preventDefault();
   });
 
-  // Launch AR experience on page load
+  // Simulate a click to launch AR experience on page load
   window.addEventListener('load', () => {
     modelViewer.activateAR();
+    modelViewer.dispatchEvent(new Event('click'));
   });
 </script>
-
      
 <script>
       /* Ensure the AR button is visible in AR mode */
