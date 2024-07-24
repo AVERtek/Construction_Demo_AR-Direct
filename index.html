@@ -241,7 +241,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
      
    <div class="slider">
      <div class="slides">
-     <button class="slide selected" onclick="switchSrc(this, window.location.href='https://avertek.github.io/Construction_Demo_AR-Direct_2/')" style="background-image: url('images/Company Here transparent.png');">
+     <button class="slide selected" onclick="switchSrc(this, window.location.href)" style="background-image: url('images/Company Here transparent.png');">
        </button></div>
        </div>
      </model-viewer>
@@ -260,7 +260,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
    window.switchSrc = (element, url) => {
     const base = "Models/" + name;
-    modelViewer.src = base + 'window.location.href';
+    modelViewer.src = base + 'https://avertek.github.io/Construction_Demo_AR-Direct_2/';
     modelViewer.poster = base + '.png';
     const slides = document.querySelectorAll(".slide");
     slides.forEach((element) => {element.classList.remove("selected");});
