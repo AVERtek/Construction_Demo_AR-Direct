@@ -121,7 +121,15 @@ var getOutboundLink = function(url) {
 }
 </script>
 
- 
+        <!--code snippet to direct launch AR with ar-preferred -->
+<script>
+  window.addEventListener("load", () => {
+    var modelViewer = document.querySelector('model-viewer');
+    console.log("Can activate AR: " + modelViewer.canActivateAR);
+    modelViewer.activateAR();
+  });
+</script>
+        
 <style> 
 .container {
  column-count: 1;
@@ -353,15 +361,6 @@ model-viewer[ar-status="session-started"] .slides .slide {
     });
   </script>
 
-       <!--code snippet to direct launch AR with ar-preferred -->
-<!--<script>
-  window.addEventListener("load", () => {
-    var modelViewer = document.querySelector('model-viewer');
-    console.log("Can activate AR: " + modelViewer.canActivateAR);
-    modelViewer.activateAR();
-  });
-</script> -->
-       
  <style>
   /* This keeps child nodes hidden while the element loads */
   :not(:defined) > * {
