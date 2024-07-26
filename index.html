@@ -242,7 +242,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
      <a-entity position="0 0 -1">
         <a-image src="https://i.imgur.com/your-image.png" width="1" height="1" position="0 0 0.1" onclick="window.location.href='https://avertek.github.io/Construction_Demo/';"></a-image>
         </a-entity>
-     
+
      <!--<div id="ar-prompt">
       <img src="images/hand.png">
      </div>
@@ -251,7 +251,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
        AR is not tracking!
      </button> -->
      
-  <div class="slider">
+     <div class="slider">
   <div class="slides">
     <button class="slide selected" onclick="switchSrc(this, 'https://avertek.github.io/Construction_Demo_AR-Direct_2/')" style="background-image: url('images/Company Here transparent.png');">
     </button>
@@ -283,6 +283,39 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     ev.preventDefault();
   });
 </script>
+
+  <!--<div class="slider">
+  <div class="slides">
+    <button class="slide selected" onclick="switchSrc(this, 'https://avertek.github.io/Construction_Demo_AR-Direct_2/')" style="background-image: url('images/Company Here transparent.png');">
+    </button>
+  </div>
+</div>
+<model-viewer></model-viewer>
+
+<script type="module">
+  const modelViewer = document.querySelector("model-viewer");
+
+  window.switchSrc = (element, url) => {
+    modelViewer.setAttribute('ar-modes', 'webxr scene-viewer quick-look');
+    modelViewer.setAttribute('ios-src', url);
+    modelViewer.setAttribute('src', url);
+    modelViewer.setAttribute('poster', 'Models/' + 'poster.png');
+    
+    const slides = document.querySelectorAll(".slide");
+    slides.forEach((slide) => {
+      slide.classList.remove("selected");
+    });
+    element.classList.add("selected");
+
+    // Navigate to the URL
+    window.location.href = url;
+  };
+
+  document.querySelector(".slider").addEventListener('beforexrselect', (ev) => {
+    // Keep slider interactions from affecting the XR scene.
+    ev.preventDefault();
+  });
+</script> -->
 
 <!--<div class="slider">
   <div class="slides">
